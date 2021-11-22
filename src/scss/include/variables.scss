@@ -1,0 +1,26 @@
+:root {
+	// Typography
+	--main-ff: "OpenSans", sans-serif;
+	--second-ff: "HelveticaNeueCyr", sans-serif;
+
+	// colors
+	--color-dark: #000;
+	--color-bg: #fff;
+	--color-white: #fff;
+	--color-green-light: #94c22b;
+	--color-purple: #6c2f7c;
+	--color-grey: #8a8a8a;
+	--color-grey2: #a5a5a5;
+	--color-grey-light: #fafafa;
+	--border-color: rgba(160, 160, 160, 0.5);
+
+	--grid-gap: 48px;
+}
+
+$breakpoint-xxs: 480px;
+$breakpoint-xs: 575px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 991px;
+$breakpoint-lg: 1199px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1680px;

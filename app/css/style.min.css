@@ -1,0 +1,133 @@
+:root {
+  --main-ff: "Roboto",sans-serif;
+  --second-ff: "Roboto",sans-serif;
+  --color-dark: #333;
+  --color-bg: #fff;
+  --color-white: #fff;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: OpenSans;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/OpenSans-Regular.woff2) format("woff2"),url(../fonts/OpenSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: OpenSans;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/OpenSans-SemiBold.woff2) format("woff2"),url(../fonts/OpenSans-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: OpenSans;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/OpenSans-Bold.woff2) format("woff2"),url(../fonts/OpenSans-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/HelveticaNeueCyr-Medium.woff2) format("woff2"),url(../fonts/HelveticaNeueCyr-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-display: swap;
+  src: url(../fonts/HelveticaNeueCyr-Bold.woff2) format("woff2"),url(../fonts/HelveticaNeueCyr-Bold.woff) format("woff");
+}
+
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+body {
+  color: var(--color-dark);
+  font-family: var(--main-ff);
+  background-color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: var(--second-ff);
+}
+
+.list-rest {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.site-container {
+  width: 100%;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.page-main {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.footer {
+  color: red;
+}
+
+.hero__bg-img {
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+/*# sourceMappingURL=style.min.css.map */

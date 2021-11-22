@@ -1,3 +1,90 @@
+- let nav_arr = ["О банке","Реквизиты банка", "Пресс-центр", "Вакансии"];
+- let nav_arr2 = ["Кредиты","Вклады", "Пластиковые карты", "Онлайн страхование", "Платежи и переводы", "Брокерское обслуживание", "Реализация залогового имущества", "Расчетно-кассовое обслуживание"];
+- let nav_arr3 = ["Расчетно-кассовое обслуживание", "Кредиты", "Депозиты бизнесу", "Банковские гарантии", "Пластиковые карты", "Онлайн-сервис"];
+
 footer.footer
-	.site-container
-		h1 footer
+	.site-container.footer__container
+		.footer__top-block
+			nav.nav
+				ul.nav__list
+					each item in nav_arr
+						li.nav__item
+							a.nav__link(href="/")=item
+		.footer__middle-block.grid
+			.footer__middle-block-col
+				span.footer__legend
+					|	Частным лицам
+				ul.footer__nav-list
+					each item in nav_arr2
+						li.footer__nav-item
+							a.footer__nav-link(href="")=item
+			.footer__middle-block-col
+				span.footer__legend
+					|	Бизнесу
+				ul.footer__nav-list
+					each item in nav_arr3
+						li.footer__nav-item
+							a.footer__nav-link(href="")=item
+			.footer__middle-block-col
+				a.footer__tel(href="tel:88007751877")
+					|	8 (800) 77-518-77
+					span
+						|	Звонок по России бесплатный
+				.footer__mobile
+					span.footer__legend
+						|	Мобильное приложение:
+					a.footer__mobile-link(href="/")
+						img(src="img/apple-store.jpg", alt="Загрузите в AppStore")
+					a.footer__mobile-link(href="/")
+						img(src="img/google-play.jpg", alt="Загрузить на GooglePlay")
+					.footer__mobile-qr
+						img.footer__mobile-qr-img(src="img/qr.png", alt="Отсканируйте QR код и установите мобильный банк")
+						span
+							|	Отсканируйте QR код и установите мобильный банк
+			.footer__middle-block-col
+				a.button.button-reset.button_secondary.footer__button
+					|	Офисы и банкоматы
+				span.footer__legend
+					|	Мобильное приложение:
+				ul.footer__social
+					li.footer__social-item
+						a.footer__social-link(href="/")(arial-label="Вконтакте")
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-fb footer__social-link-icon">
+								<rect width="40" height="40" rx="8" fill="#3B5998"/>
+								<path d="M22.0151 16.124V13.8166C22.0151 12.7749 22.2545 12.248 23.9362 12.248H26.0461V8.37207H22.5253C18.2109 8.37207 16.7874 10.2737 16.7874 13.538V16.124H13.9531V20H16.7874V31.6279H22.0151V20H25.5675L26.0461 16.124H22.0151Z" fill="white"/>
+							</svg>
+					li.footer__social-item
+						a.footer__social-link(href="/")(arial-label="facebook")
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-vk footer__social-link-icon">
+								<rect width="40" height="40" rx="8" fill="#4D7198"/>
+								<path d="M29.1001 22.9426C30.9681 24.6459 31.3538 25.462 31.414 25.5685C32.1853 26.8223 30.5704 26.9169 30.5704 26.9169L27.4611 26.9642C27.4611 26.9642 26.7863 27.0943 25.9186 26.5029C24.7496 25.7223 23.6288 23.676 22.7972 23.948C21.9416 24.2201 21.9657 26.0535 21.9657 26.0535C21.9657 26.0535 21.9657 26.3137 21.7729 26.5148C21.5559 26.7395 21.1341 26.6567 21.1341 26.6567H19.7482C19.7482 26.6567 16.6751 26.9642 13.9876 24.2082C11.035 21.2039 8.43194 15.2897 8.43194 15.2897C8.43194 15.2897 8.28732 14.9349 8.44399 14.7338C8.62476 14.5445 9.13092 14.5445 9.13092 14.5445H12.4571C12.4571 14.5445 12.7825 14.5445 12.9874 14.7338C13.1682 14.8639 13.2766 15.136 13.2766 15.136C13.2766 15.136 13.8069 16.4489 14.53 17.6554C15.9159 20.0092 16.5546 20.5178 17.0005 20.2694C17.7236 19.9027 17.5187 16.9457 17.5187 16.9457C17.5187 16.9457 17.5308 15.8693 17.1692 15.3962C16.892 15.0295 16.3618 14.9112 16.1328 14.8876C15.94 14.8639 16.2533 14.4381 16.651 14.237C17.2536 13.9531 18.3021 13.9531 19.5554 13.9531C20.5316 13.9531 20.8088 14.0241 21.1824 14.1069C22.3393 14.3789 21.9416 15.4317 21.9416 17.9393C21.9416 18.7554 21.8211 19.8673 22.3875 20.2576C22.6406 20.4232 23.2672 20.2813 24.8339 17.6909C25.557 16.4607 26.1114 15.0058 26.1114 15.0058C26.1114 15.0058 26.2319 14.7574 26.4127 14.6392C26.6055 14.5445 26.8706 14.5445 26.8706 14.5445H30.3655C30.3655 14.5445 31.4261 14.4263 31.5948 14.8876C31.7756 15.3725 31.1971 16.5199 29.763 18.3769C27.425 21.4523 27.1599 21.1684 29.1001 22.9426Z" fill="white"/>
+							</svg>
+					li.footer__social-item
+						a.footer__social-link(href="/")
+							img(src="img/inst.svg", alt="Инстаграм")
+		.footer__bottom-block
+			.footer__links_wrapper
+				.footer__links
+					a.footer__links-item(href="/")
+						|	Информация о лицах, под контролем которых находится банк
+					a.footer__links-item(href="/")
+						|	Центр раскрытия корпоративной информации
+					a.footer__links-item(href="/")
+						|	Информация о максимальных процентных ставках по вкладам физических лиц
+					a.footer__links-item(href="/")
+						|	Раскрытие информации профессиональным участником рынка ценных бумаг
+				a.footer__visuallyImpaired(href="/")
+					+icon("visuallyImpaired")(width="22", height="18", class="footer__visuallyImpaired-icon")
+					span
+						|	Версия для слабовидящих
+			.footer__copyright
+				span.footer__copyright-license
+					|	© Банк Казани, 2020
+					br
+					|	Лицензия № 708 от 27.05.2016г, ООО КБЭР “Банк Казани”
+				a.markweber(href="/")
+					|	Создание сайта
+					img(src="img/MarkWeber.svg", alt="Создание сайта студия MarkWeber")
+				a.footer__old-site-link(href="/")
+					|	Перейти на старую версию сайта
+

@@ -24,7 +24,7 @@
 			@content;
 		}
 	} @else if $size == 'custom' {
-		@media screen and (#{$type}-width: $pixels + px) {
+		@media screen and (#{$type}-width: $pixels) {
 			@content;
 		}
 	} @else {

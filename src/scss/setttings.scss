@@ -7,10 +7,20 @@
 html {
 	font-size:  10px;
 	line-height: 1.2;
+
+	@include mq(custom, max, 1440px) {
+		font-size: 9px;
+	}
+
+	@include mq(lg) {
+		font-size: 8px;
+	}
 }
 
 body {
 	color: var(--color-dark);
+	font-size: rem(16px);
+	line-height: rem(24px);
 	font-family: var(--main-ff);
 	background-color: var(--color-white);
 }
@@ -24,6 +34,7 @@ img {
 h1 {
 	margin: 0;
 	font-weight: 700;
+	line-height: 1.2;
 	font-family: var(--main-ff);
 }
 
@@ -35,6 +46,17 @@ h6 {
 	margin: 0;
 	font-weight: 600;
 	font-family: var(--main-ff);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .list-rest {

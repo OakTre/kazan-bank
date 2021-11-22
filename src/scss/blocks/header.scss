@@ -1,1 +1,99 @@
-//
+.header {
+	&__container {
+
+	}
+
+	&__top-block {
+		display: flex;
+		align-items: center;
+		padding-top: rem(50px);
+		padding-bottom: rem(40px);
+		border-bottom: 6px solid var(--color-green-light);
+	}
+
+	&__logo {
+		margin-right: rem(30px);
+	}
+
+	&__burger-button {
+		display: flex;
+		align-items: center;
+		margin-right: rem(20px);
+		font-weight: 600;
+		font-size: rem(14px);
+		line-height: rem(19px);
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	&__burger-icon {
+		display: block;
+		margin-right: rem(15px);
+		fill: var(--color-green-light);
+	}
+
+	&__city {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: rem(14px);
+		line-height: rem(19px);
+		text-transform: uppercase;
+	}
+
+	&__tel {
+		display: inline-block;
+		margin-right: rem(35px);
+		margin-left: auto;
+		font-weight: 600;
+		font-size: rem(30px);
+		line-height: 120%;
+	}
+
+	&__offices-button {
+		margin-right: rem(17px);
+	}
+
+	&__bottom-block {
+		display:  flex;
+		align-items: center;
+		padding: rem(34px) 0;
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	&__search-icon {
+		margin-left: auto;
+		display: block;
+		fill: var(--color-green-light);
+	}
+
+	&__bottom-block-link {
+		margin-right: rem(32px);
+		font-weight: 600;
+		font-size: rem(32px);
+		line-height: rem(44px);
+		transition: color var(--main-transition);
+
+		&._is-active {
+			color: var(--color-green-light);
+		}
+
+		&:hover {
+			color: var(--color-green-light);
+		}
+
+		&:nth-last-of-type(1) {
+			margin-right: 0;
+		}
+	}
+}
+
+.city-choose {
+	cursor: pointer;
+
+	&__icon {
+		display: block;
+		margin-right: rem(8px);
+		fill: var(--color-green-light);
+	}
+}

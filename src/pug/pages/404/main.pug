@@ -1,0 +1,15 @@
+main.page-main.main
+	section.error-page
+		.site-content.error-page__container
+			img(src="img/error-page-img.png", alt="Что-то пошло не так", class="error-page__image")
+			h1.error-page__title
+				|	Что-то пошло не так...
+			p.error-page__text
+				|	К сожалению, мы не можем идентифицировать вас удаленно. Будем рады вас видеть в нашем отделении
+			.error-page__btns
+				a.button.error-page__button-repeat(href="/")
+					|	Повторить процедуру
+				a.error-page__near-office-btn(href="/")
+					|	 Найти ближайщее отделение
+					+icon("arrow-right")(width="14", height="14", class="error-page__near-office-btn-icon")
+	include ../../parts/contact-us.pug

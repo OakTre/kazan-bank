@@ -98,6 +98,11 @@ ul {
 	flex-direction: column;
 	min-height: 100vh;
 	overflow: hidden;
+
+	::selection {
+		background-color: var(--color-purple);
+		color: var(--color-white);
+	}
 }
 
 .page-main {

@@ -1,0 +1,41 @@
+.online-services {
+	margin-bottom: rem(123px);
+
+	&__title {
+		margin-bottom: rem(50px);
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		max-width: rem(259px);
+		margin-right: rem(66px);
+
+		&-icon {
+			display: block;
+			fill: var(--color-green-light);
+			margin-bottom: rem(16px);
+		}
+
+		&-legend {
+			display: block;
+			margin-bottom: rem(20px);
+			font-weight: 600;
+			font-size: rem(24px);
+			line-height: rem(28px);
+		}
+
+		&-text {
+			display: inline-block;
+			max-width: 96%;
+			font-size: rem(18px);
+			line-height: rem(24px);
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

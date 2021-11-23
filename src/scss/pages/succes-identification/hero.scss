@@ -1,0 +1,33 @@
+.succes-identification {
+	&__container {
+		position: relative;
+		padding-top: rem(126px);
+		padding-bottom: rem(136px);
+	}
+
+	&__image {
+		position: absolute;
+		top: rem(26px);
+		right: rem(100px);
+	}
+
+	&__title {
+		max-width: rem(571px);
+		font-size: rem(54px);
+		line-height: rem(64px);
+		margin-bottom: rem(30px);
+		color: var(--color-green-light);
+	}
+
+	&__text {
+		max-width: rem(540px);
+		margin: 0;
+		margin-bottom: rem(40px);
+		font-size: rem(22px);
+		line-height: rem(32px);
+	}
+
+	&__button {
+		padding: rem(22px) rem(32px);
+	}
+}

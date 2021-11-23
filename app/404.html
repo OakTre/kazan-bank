@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Описание сайта">
-    <title>Главная | Банк Казани</title>
+    <title>Что-то пошло не так | Банк Казани</title>
     <link rel="stylesheet" href="./css/vendor.min.css?v=0.0.0.0">
     <link rel="stylesheet" href="./css/style.min.css?v=0.0.0.0">
   </head>
-  <body class="page-home">
+  <body class="page-error">
     <div class="page-wrapper">
       <header class="header">
         <div class="site-container header__container">
@@ -36,8 +36,15 @@
         </div>
       </header>
       <main class="page-main main">
-        <section class="hero">
-          <div class="site-container" style="height: 500px"></div>
+        <section class="error-page">
+          <div class="site-content error-page__container"><img class="error-page__image" src="img/error-page-img.png" alt="Что-то пошло не так">
+            <h1 class="error-page__title">	Что-то пошло не так...</h1>
+            <p class="error-page__text">	К сожалению, мы не можем идентифицировать вас удаленно. Будем рады вас видеть в нашем отделении</p>
+            <div class="error-page__btns"><a class="button error-page__button-repeat" href="/">	Повторить процедуру</a><a class="error-page__near-office-btn" href="/">	 Найти ближайщее отделение
+                <svg class="icon icon-arrow-right error-page__near-office-btn-icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg></a></div>
+          </div>
         </section>
         <section class="contact-us lazy" data-bg="img/contact-us-bg-all.webp" data-bg-fallback="img/contact-us-bg-all.jpg">
           <div class="site-content contact-us__container">

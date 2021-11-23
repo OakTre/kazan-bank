@@ -1,0 +1,14 @@
+section.contact-us.lazy(data-bg="img/contact-us-bg-all.webp", data-bg-fallback="img/contact-us-bg-all.jpg")
+	.site-content.contact-us__container
+		.contact-us__content-wrapp
+			span.contact-us__legend
+				|	Оставлись вопросы?
+			a.contact-us__tel(href="tel:+78007751877")
+				|	8 (800) 77-518-77
+			span.contact-us__legend
+				|	Оставьте заявку и мы вам перезовним
+			form.contact-us__form(action="", data-need-validation)
+				label.contact-us__form-label
+					input.contact-us__form-input.js-phone-mask(type="tel", name="tel", placeholder="+7", data-parsley-required, data-parsley-phone)
+				button.button-rest.button.contact-us__form-button
+					|	перезвоните мне

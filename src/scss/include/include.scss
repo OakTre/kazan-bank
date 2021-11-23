@@ -23,10 +23,12 @@
 	font-size: rem(16px);
 	line-height: 120%;
 	text-transform: uppercase;
+	border: none;
 	border-radius: 10px;
 	background-color: var(--color-green-light);
 	color: var(--color-white);
 	cursor: pointer;
+	outline: none;
 
 	&_secondary {
 		color: var(--color-dark);
@@ -88,4 +90,11 @@
 		object-fit: cover;
 		transform: translateX(10px);
 	}
+}
+
+.site-second-title {
+	font-weight: 600;
+	font-size: rem(36px);
+	line-height: rem(43px);
+	margin: 0;
 }

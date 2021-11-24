@@ -1,10 +1,10 @@
-#Банк Казани, верстка
+# Банк Казани, верстка
 
 ## Ссылки
 
-[Биометрия-главная](https://oaktre.github.io/captain-morgan/app/)
-[Биометрия-успешно](https://oaktre.github.io/captain-morgan/app/succues-page)
-[Биометрия-404](https://oaktre.github.io/captain-morgan/app/404)
+1. [Биометрия-Главная](https://oaktre.github.io/captain-morgan/app/)
+2. [Биометрия-Успешно](https://oaktre.github.io/captain-morgan/app/succues-page)
+3. [Биометрия-404](https://oaktre.github.io/captain-morgan/app/404)
 
 ## Список команд
 

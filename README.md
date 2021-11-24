@@ -2,9 +2,9 @@
 
 ## Ссылки
 
-1. [Биометрия-Главная](https://oaktre.github.io/captain-morgan/app/)
-2. [Биометрия-Успешно](https://oaktre.github.io/captain-morgan/app/succues-page)
-3. [Биометрия-404](https://oaktre.github.io/captain-morgan/app/404)
+1. [Биометрия-Главная](https://oaktre.github.io/kazan-bank/app/)
+2. [Биометрия-Успешно](https://oaktre.github.io/kazan-bank/app/succues-page)
+3. [Биометрия-404](https://oaktre.github.io/kazan-bank/app/404)
 
 ## Список команд
 

@@ -1,0 +1,38 @@
+.biometric-feautures {
+	margin-bottom: rem(116px);
+
+	&__content {
+		display: flex;
+	}
+
+	&__item {
+		max-width: rem(250px);
+		margin-right: rem(66px);
+
+		&-icon {
+			display: block;
+			margin-bottom: rem(32px);
+			fill: var(--color-purple);
+
+			&._stroke {
+				fill: none;
+				stroke: var(--color-purple);
+				stroke-width: 4px;
+			}
+		}
+
+		&-heading {
+			display: inline-block;
+			margin-bottom: rem(20px);
+			font-weight: 600;
+			font-size: rem(24px);
+			line-height: rem(28px);
+		}
+
+		&-text {
+			margin: 0;
+			font-size: rem(18px);
+			line-height: rem(24px);
+		}
+	}
+}

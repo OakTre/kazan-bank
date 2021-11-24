@@ -1,9 +1,32 @@
 .hero {
-	&__bg-img {
-		width: 500px;
-		height: 500px;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
+	position: relative;
+	margin-bottom: 10rem;
+	padding-top: 33.5rem;
+	padding-bottom: 12.8rem;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__content-wrap {
+		max-width: 57.1rem;
+	}
+
+	&__title {
+		font-size: 5.4rem;
+		line-height: 6.4rem;
+		margin-bottom: rem(21px);
+	}
+
+	&__text {
+		margin: 0;
+		margin-bottom: 6rem;
+		font-size: rem(22px);
+		line-height: rem(32px);
+	}
+
+	&__button {
+		padding: rem(22px) rem(32px);
+		font-size: rem(16px);
+		line-height: rem(19px);
 	}
 }

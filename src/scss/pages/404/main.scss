@@ -43,11 +43,22 @@
 		line-height: rem(19px);
 		text-transform: uppercase;
 		color: var(--color-green-light);
+		transition: color var(--main-transition);
 
 		&-icon {
 			display: block;
 			margin-left: 1rem;
 			fill: var(--color-green-light);
+			transition: fill var(--main-transition);
+		}
+
+		&:hover,
+		&:focus {
+			color: var(--color-purple);
+
+			.error-page__near-office-btn-icon {
+				fill: var(--color-purple);
+			}
 		}
 	}
 

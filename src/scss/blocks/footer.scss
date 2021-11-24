@@ -1,8 +1,4 @@
 .footer {
-	&__container {
-
-	}
-
 	&__top-block {
 		padding: rem(40px) 0 rem(31px) 0;
 		border-top: 6px solid var(--color-green-light);
@@ -44,6 +40,10 @@
 		&:hover {
 			color: var(--color-green-light);
 		}
+
+		&:focus {
+			color: var(--color-green-light);
+		}
 	}
 
 	&__tel {
@@ -62,6 +62,10 @@
 		}
 
 		&:hover {
+			color: var(--color-green-light);
+		}
+
+		&:focus {
 			color: var(--color-green-light);
 		}
 	}
@@ -168,6 +172,10 @@
 			&:hover {
 				color: var(--color-green-light);
 			}
+
+			&:focus {
+				color: var(--color-green-light);
+			}
 		}
 	}
 
@@ -180,11 +188,20 @@
 		line-height: rem(24px);
 		padding: rem(17px) rem(21px) rem(15px) rem(22px);
 		border-radius: 8px;
+		transition: color var(--main-transition), background-color var(--main-transition);
 
 		&-icon {
 			display: block;
 			margin-right: rem(10px);
 			fill: var(--color-white);
+		}
+
+		&:hover {
+			background-color: var(--color-green-light);
+		}
+
+		&:focus {
+			background-color: var(--color-green-light);
 		}
 	}
 
@@ -209,6 +226,10 @@
 		text-decoration: underline;
 
 		&:hover {
+			text-decoration: none;
+		}
+
+		&:focus {
 			text-decoration: none;
 		}
 	}

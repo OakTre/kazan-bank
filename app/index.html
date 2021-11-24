@@ -11,7 +11,7 @@
   </head>
   <body class="page-home">
     <div class="page-wrapper">
-      <header class="header">
+      <header class="header header_absolute">
         <div class="site-container header__container">
           <div class="header__top-block">
             <a class="header__logo logo" href="/"><img src="img/logo.svg" alt="Банк Казани"></a>
@@ -45,8 +45,125 @@
         </div>
       </header>
       <main class="page-main main">
-        <section class="hero">
-          <div class="site-container" style="height: 500px"></div>
+        <section class="hero lazy" data-bg="img/index-hero-bg.webp" data-bg-fallback="img/index-hero-bg.jpg">
+          <div class="site-container hero__container">
+            <div class="site-content">
+              <ul class="breadcrubs">
+                <li class="breadcrubs__item">
+                  <a class="breadcrubs__item-link" href="/">
+                    <svg class="icon icon-arrow-shevron-left breadcrubs__item-icon" width="9" height="14">
+                      <use xlink:href="img/sprite.svg#arrow-shevron-left"></use>
+                    </svg>	Назад
+                  </a>
+                </li>
+              </ul>
+              <div class="hero__content-wrap">
+                <h1 class="hero__title">	Станьте клиентом банка, не выходя из дома</h1>
+                <p class="hero__text">	Оформляйте банковские продукты с помощью биометрической идентификации</p>
+                <a class="button hero__button" href="/">	 Регистрация через «Госуслуги»</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="biometric-data">
+          <div class="site-container biometric-data__content">
+            <picture>
+              <source type="image/webp" srcset="img/device.webp"/><img class="biometric-data__content-img" src="img/device.png" alt="Если вы хотите сдать биометрические данные"/>
+            </picture>
+            <div class="site-content">
+              <h2 class="site-second-title biometric-data__title">	Если вы хотите сдать биометрические данные</h2>
+              <ul class="biometric-data__list">
+                <li class="biometric-data__item"><b>	Создайте учётную запись,</b>	на портале «Госуслуги»</li>
+                <li class="biometric-data__item"><b>	Подойдите в офис Банка,</b>	чтобы сдать биометрические данные</li>
+                <li class="biometric-data__item"><b>	Специалист подтвердит учётную запись</b>	на&nbsp;портале &laquo;Госуслуги&raquo;, сфотографирует вас и&nbsp;запишет ваш голос</li>
+              </ul>
+            </div>
+          </div>
+          <div class="site-content biometric-data__info-wrap">
+            <span class="biometric-data__legend">	А что такое «Удаленная идентификация»?</span>
+            <p class="biometric-data__text">	Удаленная идентификация&nbsp;&mdash; это механизм, позволяющий физическим лицам получать финансовые услуги дистанционно, подтвердив свою личность с&nbsp;помощью биометрических персональных данных (изображение лица и&nbsp;голоса)</p>
+          </div>
+        </section>
+        <section class="biometric-steps">
+          <ul class="site-content biometric-steps__content">
+            <li class="biometric-steps__content-item">
+              <h2 class="biometric-steps__title site-second-title">	Если вы уже имеете биометрические данные</h2>
+              <p class="biometric-steps__text">	Проверить регистрацию ваших биометрических данных можно в вашем профиле на портале или мобильном приложении Госуслуг</p>
+              <a class="biometric-steps__link" href="/">	 Проверить статус
+                <svg class="icon icon-arrow-right biometric-steps__link-icon" width="17" height="17">
+                  <use xlink:href="img/sprite.svg#arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="biometric-steps__content-item">
+              <span class="biometric-steps__content-item-step">	Шаг 1</span>
+              <p class="biometric-steps__content-item-text">	Для регистрации используйте компьютер или ноутбук с исправной камерой и микрофоном. Нажмитена кнопку «Стать клиентом через Госуслуги»</p>
+              <svg class="icon icon-monitor biometric-steps__content-item-icon" width="60" height="60">
+                <use xlink:href="img/sprite.svg#monitor"></use>
+              </svg>
+            </li>
+            <li class="biometric-steps__content-item">
+              <span class="biometric-steps__content-item-step">	Шаг 2</span>
+              <p class="biometric-steps__content-item-text">	Следуйте инструкциям на экране. В процессе будет необходимо авторизоваться на портале Госуслуги и перейти к биометрической идентификации</p>
+              <svg class="icon icon-gos-logo biometric-steps__content-item-icon" width="60" height="60">
+                <use xlink:href="img/sprite.svg#gos-logo"></use>
+              </svg>
+            </li>
+            <li class="biometric-steps__content-item">
+              <span class="biometric-steps__content-item-step">	Шаг 3</span>
+              <p class="biometric-steps__content-item-text">	Посмотрите в камеру и произнесите нескольких цифр в микрофон. Нажмите «Готово» и предоставьте банку права на просмотр данных</p>
+              <svg class="icon icon-face-id biometric-steps__content-item-icon" width="60" height="60">
+                <use xlink:href="img/sprite.svg#face-id"></use>
+              </svg>
+            </li>
+            <li class="biometric-steps__content-item">
+              <span class="biometric-steps__content-item-step">	Шаг 4</span>
+              <p class="biometric-steps__content-item-text">	Подтвердите подписание документов и дождитесь СМС на телефон с данными для входа в Интернет-банк</p>
+              <svg class="icon icon-confirm biometric-steps__content-item-icon" width="60" height="60">
+                <use xlink:href="img/sprite.svg#confirm"></use>
+              </svg>
+            </li>
+            <li class="biometric-steps__content-item lazy" data-bg="img/biometric-steps-content-img.webp" data-bg-fallback="img/biometric-steps-content-img.png">
+              <a class="biometric-steps__content-item-step" href="/">
+                <span>	Оформляйте банковские продукты, не выходя из дома</span>
+                <svg class="icon icon-arrow-right-big biometric-steps__content-item-icon" width="42" height="42">
+                  <use xlink:href="img/sprite.svg#arrow-right-big"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="biometric-feautures">
+          <ul class="site-content biometric-feautures__content">
+            <li class="biometric-feautures__item">
+              <svg class="icon icon-shield biometric-feautures__item-icon" width="58" height="58">
+                <use xlink:href="img/sprite.svg#shield"></use>
+              </svg>
+              <span class="biometric-feautures__item-heading">	Безопасно</span>
+              <p class="biometric-feautures__item-text">	Двойная проверка: подтверждение учётной записи ЕСИА на портале «Госуслуги» и очнов отделении любого банка при регистрации в Единой биометрической системе</p>
+            </li>
+            <li class="biometric-feautures__item">
+              <svg class="icon icon-sofa biometric-feautures__item-icon" width="58" height="58">
+                <use xlink:href="img/sprite.svg#sofa"></use>
+              </svg>
+              <span class="biometric-feautures__item-heading">	Удобно</span>
+              <p class="biometric-feautures__item-text">	Вы становитесь полноценным клиентом банка и можете оформить ряд банковских продуктов, не выходя из дома</p>
+            </li>
+            <li class="biometric-feautures__item">
+              <svg class="icon icon-star biometric-feautures__item-icon _stroke" width="58" height="58">
+                <use xlink:href="img/sprite.svg#star"></use>
+              </svg>
+              <span class="biometric-feautures__item-heading">	Лучшие условия</span>
+              <p class="biometric-feautures__item-text">	Находите лучшие условия вкладов и кредитов через интернет и заключайте договор с банком дистанционно</p>
+            </li>
+            <li class="biometric-feautures__item">
+              <svg class="icon icon-time biometric-feautures__item-icon _stroke" width="58" height="58">
+                <use xlink:href="img/sprite.svg#time"></use>
+              </svg>
+              <span class="biometric-feautures__item-heading">	В любое время</span>
+              <p class="biometric-feautures__item-text">	Открывайте счета, вклады и получайте кредитыв удобное для вас время</p>
+            </li>
+          </ul>
         </section>
         <section class="contact-us lazy" data-bg="img/contact-us-bg-all.webp" data-bg-fallback="img/contact-us-bg-all.jpg">
           <div class="site-content contact-us__container">

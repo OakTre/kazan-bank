@@ -1,2 +1,16 @@
-section.hero
-	.site-container(style="height: 500px")
+section.hero.lazy(data-bg="img/index-hero-bg.webp", data-bg-fallback="img/index-hero-bg.jpg")
+	.site-container.hero__container
+		.site-content
+			ul.breadcrubs
+				li.breadcrubs__item
+					a.breadcrubs__item-link(href="/")
+						+icon("arrow-shevron-left")(width="9", height="14", class="breadcrubs__item-icon")
+						|	Назад
+			.hero__content-wrap
+				h1.hero__title
+					|	Станьте клиентом банка, не выходя из дома
+				p.hero__text
+					|	Оформляйте банковские продукты с помощью биометрической идентификации
+				a.button.hero__button(href="/")
+					|	 Регистрация через «Госуслуги»
+

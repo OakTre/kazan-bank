@@ -32,6 +32,15 @@
 		font-weight: 700;
 		font-size: rem(50px);
 		line-height: rem(60px);
+		transition: color var(--main-transition);
+
+		&:hover {
+			color: var(--color-green-light);
+		}
+
+		&:focus {
+			color: var(--color-green-light);
+		}
 	}
 
 	&__form {

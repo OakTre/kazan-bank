@@ -3,16 +3,39 @@
 		padding: rem(40px) 0 rem(31px) 0;
 		border-top: 6px solid var(--color-green-light);
 		border-bottom: 1px solid var(--border-color);
+
+		@include mq(md) {
+			display: none;
+		}
 	}
 
 	&__middle-block {
 		row-gap: 0;
 		padding: rem(44px) 0 rem(40px) 0;
 		border-bottom: 1px solid var(--border-color);
+
+		@include mq(md) {
+			padding-top: 0;
+			row-gap: 4rem;
+		}
 	}
 
 	&__middle-block-col {
 		grid-column: 3 span;
+
+		@include mq(md) {
+			grid-column: 6 span;
+
+			&:nth-last-of-type(1) {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+
+		@include mq(xs) {
+			grid-column: 12 span;
+		}
 	}
 
 	&__legend {
@@ -78,6 +101,19 @@
 		line-height: rem(24px);
 		text-transform: none;
 		margin-bottom: rem(50px);
+
+		@include mq(md) {
+			border-color: var(--color-green-light);
+			color: var(--color-green-light);
+		}
+	}
+
+	&__mobile {
+		@include mq(md) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	&__mobile-link {
@@ -95,6 +131,11 @@
 			width: rem(133px);
 			height: rem(40px);
 			object-fit: cover;
+		}
+
+		@include mq(md) {
+			margin-right: 0 !important;
+			margin-bottom: rem-mq(10px) !important;
 		}
 	}
 
@@ -146,6 +187,11 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
+			@include mq(md) {
+				align-items: flex-start;
+				flex-direction: column;
+			}
 		}
 
 		&-item {
@@ -176,6 +222,10 @@
 			&:focus {
 				color: var(--color-green-light);
 			}
+		}
+
+		@include mq(md) {
+			margin-bottom: rem-mq(20px);
 		}
 	}
 
@@ -209,6 +259,11 @@
 		display: flex;
 		align-items: flex-end;
 		margin-top: rem(26px);
+
+		@include mq(xs) {
+			flex-direction: column;
+			align-items: stretch;
+		}
 	}
 
 	&__copyright-license {
@@ -217,6 +272,11 @@
 		font-size: rem(16px);
 		line-height: rem(19px);
 		color: var(--color-grey2);
+
+		@include mq(xs) {
+			margin-right: 0;
+			margin-bottom: rem-mq(10px);
+		}
 	}
 
 	&__old-site-link {
@@ -231,6 +291,10 @@
 
 		&:focus {
 			text-decoration: none;
+		}
+
+		@include mq(xs) {
+			margin-top: rem-mq(10px);
 		}
 	}
 }

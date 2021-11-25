@@ -6,6 +6,10 @@
 		grid-template-columns: repeat(10, 1fr);
 		row-gap: rem(60px);
 		column-gap: rem(48px);
+
+		@include mq(xs) {
+			row-gap: rem-mq(30px);
+		}
 	}
 
 	&__content-item {
@@ -37,6 +41,8 @@
 			right: rem(36px);
 			display: block;
 			fill: var(--color-green-light);
+			width: rem(60px);
+			height: rem(60px);
 		}
 
 		&:first-child {
@@ -49,6 +55,11 @@
 			background-repeat: no-repeat;
 			background-position: left bottom;
 			background-size: rem(538px) rem(248px);
+
+			.biometric-steps__content-item-icon {
+				width: 4.2rem;
+				height: 4.2rem;
+			}
 
 			.biometric-steps__content-item-step {
 				display: flex;
@@ -88,10 +99,41 @@
 				fill: var(--color-dark);
 			}
 		}
+
+
+		@include mq(xs) {
+			padding: rem-mq(24px) rem-mq(30px);
+			grid-column: 10 span;
+			min-height: rem-mq(205px);
+
+			&:first-child {
+				min-height: auto;
+			}
+
+			&-icon {
+				width: rem-mq(30px);
+				height: rem-mq(30px);
+			}
+
+			&-step {
+				font-size: rem-mq(14px);
+				line-height: rem-mq(19px);
+				margin-bottom: rem-mq(18px);
+			}
+
+			&-step {
+				font-size: rem-mq(14px);
+				line-height: rem-mq(19px);
+			}
+		}
 	}
 
 	&__title {
 		margin-bottom: rem(40px);
+
+		@include mq(xs) {
+			margin-bottom: rem-mq(16px);
+		}
 	}
 
 	&__text {
@@ -114,6 +156,8 @@
 			fill: var(--color-green-light);
 			margin-left: rem(13px);
 			transition: fill var(--main-transition);
+			width: 1.7rem;
+			height: 1.7rem;
 		}
 
 		&:hover {
@@ -131,5 +175,9 @@
 				fill: var(--color-purple);
 			}
 		}
+	}
+
+	@include mq(xs) {
+		margin-bottom: rem-mq(60px);
 	}
 }

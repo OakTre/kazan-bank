@@ -1,14 +1,26 @@
 .online-services-use-now {
 	margin-bottom: rem(120px);
 
+	@include mq(sm) {
+		margin-bottom: rem-mq(50px);
+	}
+
 	&__title {
 		margin-bottom: rem(40px);
+
+		@include mq(sm) {
+			margin-bottom: rem-mq(20px);
+		}
 	}
 
 	&__list {
 		grid-template-columns: repeat(10, 1fr);
 		grid-template-rows: repeat(2, rem(146px));
 		gap: rem(20px);
+
+		@include mq(sm) {
+			grid-template-rows: none;
+		}
 	}
 
 	&__item {
@@ -17,6 +29,12 @@
 		border-radius: 10px;
 		grid-column: 5 span;
 
+		@include mq(sm) {
+			grid-column: 10 span;
+			grid-template-rows: none;
+			padding: rem-mq(24px) rem-mq(30px);
+		}
+
 		&-legend {
 			display: block;
 			margin-bottom: rem(15px);
@@ -24,11 +42,23 @@
 			font-weight: 600;
 			font-size: rem(24px);
 			line-height: rem(28px);
+
+			@include mq(sm) {
+				font-size: rem-mq(14px);
+				line-height: rem-mq(19px);
+				margin-bottom: rem-mq(18px);
+			}
 		}
 
 		&-text {
 			font-size: rem(20px);
 			line-height: rem(24px);
+
+			@include mq(sm) {
+				font-size: rem-mq(14px);
+				line-height: rem-mq(19px);
+				margin-bottom: rem-mq(21px);
+			}
 		}
 
 		&-links {
@@ -47,6 +77,10 @@
 			width: rem(126px);
 			height: rem(126px);
 			object-fit: contain;
+
+			@include mq(sm) {
+				display: none;
+			}
 		}
 
 		&-appstore,
@@ -68,6 +102,11 @@
 			.online-services-use-now__item-text {
 				display: inline-block;
 				margin-bottom: rem(26px);
+			}
+
+			@include mq(sm) {
+				grid-column: 10 span;
+				grid-row: auto;
 			}
 		}
 	}

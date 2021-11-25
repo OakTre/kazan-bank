@@ -1,22 +1,49 @@
 .online-services {
 	margin-bottom: rem(123px);
 
+	@include mq(sm) {
+		margin-bottom: rem-mq(60px);
+	}
+
 	&__title {
 		margin-bottom: rem(50px);
+
+		@include mq(sm) {
+			margin-bottom: rem-mq(22px);
+		}
 	}
 
 	&__list {
 		display: flex;
+
+		@include mq(sm) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
 		max-width: rem(259px);
 		margin-right: rem(66px);
 
+		@include mq(sm) {
+			display: flex;
+			max-width: 100%;
+			margin-bottom: rem-mq(25px);
+		}
+
 		&-icon {
 			display: block;
 			fill: var(--color-green-light);
 			margin-bottom: rem(16px);
+			width: rem(60px);
+			height: rem(60px);
+
+			@include mq(sm) {
+				width: rem-mq(36px);
+				height: rem-mq(36px);
+				margin-right: rem-mq(20px);
+				margin-bottom: 0;
+			}
 		}
 
 		&-legend {
@@ -25,6 +52,12 @@
 			font-weight: 600;
 			font-size: rem(24px);
 			line-height: rem(28px);
+
+			@include mq(sm) {
+				font-size: rem-mq(16px);
+				line-height: rem-mq(22px);
+				margin-bottom: 4px;
+			}
 		}
 
 		&-text {
@@ -32,6 +65,11 @@
 			max-width: 96%;
 			font-size: rem(18px);
 			line-height: rem(24px);
+
+			@include mq(sm) {
+				font-size: rem-mq(12px);
+				line-height: rem-mq(16px);
+			}
 		}
 
 		&:last-child {

@@ -67,6 +67,10 @@
 			margin-right: rem(8px);
 			fill: var(--color-green-light);
 			transition: fill var(--main-transition);
+
+			@include mq(md) {
+				fill: var(--color-white);
+			}
 		}
 
 		&:hover {
@@ -84,6 +88,11 @@
 				fill: var(--color-white);
 			}
 		}
+	}
+
+	@include mq(md) {
+		border-color: var(--color-white);
+		color: var(--color-white);
 	}
 }
 
@@ -139,6 +148,11 @@
 	font-size: rem(36px);
 	line-height: rem(43px);
 	margin: 0;
+
+	@include mq(xs) {
+		font-size: rem-mq(20px);
+		line-height: rem-mq(24px);
+	}
 }
 
 .breadcrubs {
@@ -176,6 +190,12 @@
 			fill: rgba($color: #000000, $alpha: 0.5);
 			margin-right: rem(14px);
 			transition: fill var(--main-transition);
+			width: 0.9rem;
+			height: 1.4rem;
 		}
+	}
+
+	@include mq(md) {
+		display: none;
 	}
 }

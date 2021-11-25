@@ -1,26 +1,69 @@
-header.header(class=headerFixed)
+header.header(class=headerClass)
 	.site-container.header__container
 		.header__top-block
+			.header__top-block-info-wrap
+				button.header__burger-button-mobile.button-reset
+					span
+					span
+					span
+				.header__burger-button.header__dropdown(tabindex="0")
+					+icon("burger-icon")(width="14", height="14", class="header__burger-icon")
+					span
+						|	о банке
+					.header__dropdown-content
+						.header__dropdown-content-inner
+							a.header__dropdown-content-item(href="/")
+								|	 Общая информация
+							a.header__dropdown-content-item(href="/")
+								|	 Реквизиты банка
+							a.header__dropdown-content-item(href="/")
+								|	 Руководство и лицензии банка
+							a.header__dropdown-content-item(href="/")
+								|	 Открытая информация
+				.header__city.city-choose.header__dropdown(tabindex="0")
+					+icon("arrow-down")(width="14", height="9", class="city-choose__icon")
+					|	Казань
+					.header__dropdown-content
+						.header__dropdown-content-inner
+							a.header__dropdown-content-item(href="/")
+								|	Москва
+							a.header__dropdown-content-item(href="/")
+								|	 Нижний Новгород
+							a.header__dropdown-content-item(href="/")
+								|	 Набережные челны
+							a.header__dropdown-content-item(href="/")
+								|	 Нижнекамск
+				a.header__tel(href="tel:88007751877")
+					|	 8-800-77-518-77
+				a.header__tel-mobile(href="tel:88007751877")
+					+icon("phone")(width="16", height="16")
+				a.button.button-reset.button_secondary.button_iconed.header__offices-button(href="/")
+					+icon("marker")(width="25", height="25", class="button_iconed__icon")
+					span
+						|	офисы и банкоматы
+				.button.button_secondary.header__web-bank.header__dropdown(tabindex="0")
+					|	интернет-банк
+					.header__dropdown-content
+						.header__dropdown-content-inner
+							a.header__dropdown-content-item(href="/")
+								|	Физическим лицам
+							a.header__dropdown-content-item(href="/")
+								|	 Юридическим лицам
+				button.button-reset.header__button-contacts
+					+icon("chat")(width="14", height="14")
 			a.header__logo.logo(href="/")
-				img(src="img/logo.svg", alt="Банк Казани")
-			button.button-reset.header__burger-button
-				+icon("burger-icon")(width="14", height="14", class="header__burger-icon")
+				img(src="img/logo.svg", alt="Банк Казани", class="header__logo-decktop")
+				img(src="img/logo-white.png", alt="Банк Казани", class="header__logo-mobile")
+		.header__bottom-block.js-form-container
+			form.header__bottom-block-form(action="/")
+				input.header__bottom-block-form-input(type="text", name="q", placeholder="Что ищете?")
+			.header__bottom-block-links
+				a.header__bottom-block-link._is-active(href="/")
+					|	Частным лицам
+				a.header__bottom-block-link(href="/")
+					|	Бизнесу
+			button.button-reset.header__search-button-hide.js-hide-form-button
 				span
-					|	о банке
-			button.button-reset.header__city.city-choose
-				+icon("arrow-down")(width="14", height="9", class="city-choose__icon")
-				|	Казань
-			a.header__tel(href="tel:88007751877")
-				|	 8-800-77-518-77
-			a.button.button-reset.button_secondary.button_iconed.header__offices-button(href="/")
-				+icon("marker")(width="25", height="25", class="button_iconed__icon")
 				span
-					|	офисы и банкоматы
-			a.button.button-reset.button_secondary.header__web-bank(href="/")
-				|	интернет-банк
-		.header__bottom-block
-			a.header__bottom-block-link._is-active(href="/")
-				|	Частным лицам
-			a.header__bottom-block-link(href="/")
-				|	Бизнесу
-			+icon("search")(width="28", height="28", class="header__search-icon", aria-label="Поиск")
+			button.button-reset.header__search-button.js-show-form-button
+				+icon("search")(width="28", height="28", class="header__search-icon", aria-label="Поиск")

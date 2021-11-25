@@ -14,33 +14,84 @@
       <header class="header header_absolute">
         <div class="site-container header__container">
           <div class="header__top-block">
-            <a class="header__logo logo" href="/"><img src="img/logo.svg" alt="Банк Казани"></a>
-            <button class="button-reset header__burger-button">
-              <svg class="icon icon-burger-icon header__burger-icon" width="14" height="14">
-                <use xlink:href="img/sprite.svg#burger-icon"></use>
-              </svg>
-              <span>	о банке</span>
-            </button>
-            <button class="button-reset header__city city-choose">
-              <svg class="icon icon-arrow-down city-choose__icon" width="14" height="9">
-                <use xlink:href="img/sprite.svg#arrow-down"></use>
-              </svg>	Казань
-            </button>
-            <a class="header__tel" href="tel:88007751877">	 8-800-77-518-77</a>
-            <a class="button button-reset button_secondary button_iconed header__offices-button" href="/">
-              <svg class="icon icon-marker button_iconed__icon" width="25" height="25">
-                <use xlink:href="img/sprite.svg#marker"></use>
-              </svg>
-              <span>	офисы и банкоматы</span>
-            </a>
-            <a class="button button-reset button_secondary header__web-bank" href="/">	интернет-банк</a>
+            <div class="header__top-block-info-wrap">
+              <button class="header__burger-button-mobile button-reset">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+              <div class="header__burger-button header__dropdown" tabindex="0">
+                <svg class="icon icon-burger-icon header__burger-icon" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#burger-icon"></use>
+                </svg>
+                <span>	о банке</span>
+                <div class="header__dropdown-content">
+                  <div class="header__dropdown-content-inner">
+                    <a class="header__dropdown-content-item" href="/">	 Общая информация</a>
+                    <a class="header__dropdown-content-item" href="/">	 Реквизиты банка</a>
+                    <a class="header__dropdown-content-item" href="/">	 Руководство и лицензии банка</a>
+                    <a class="header__dropdown-content-item" href="/">	 Открытая информация</a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__city city-choose header__dropdown" tabindex="0">
+                <svg class="icon icon-arrow-down city-choose__icon" width="14" height="9">
+                  <use xlink:href="img/sprite.svg#arrow-down"></use>
+                </svg>	Казань
+                <div class="header__dropdown-content">
+                  <div class="header__dropdown-content-inner">
+                    <a class="header__dropdown-content-item" href="/">	Москва</a>
+                    <a class="header__dropdown-content-item" href="/">	 Нижний Новгород</a>
+                    <a class="header__dropdown-content-item" href="/">	 Набережные челны</a>
+                    <a class="header__dropdown-content-item" href="/">	 Нижнекамск</a>
+                  </div>
+                </div>
+              </div>
+              <a class="header__tel" href="tel:88007751877">	 8-800-77-518-77</a>
+              <a class="header__tel-mobile" href="tel:88007751877">
+                <svg class="icon icon-phone" width="16" height="16">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+              </a>
+              <a class="button button-reset button_secondary button_iconed header__offices-button" href="/">
+                <svg class="icon icon-marker button_iconed__icon" width="25" height="25">
+                  <use xlink:href="img/sprite.svg#marker"></use>
+                </svg>
+                <span>	офисы и банкоматы</span>
+              </a>
+              <div class="button button_secondary header__web-bank header__dropdown" tabindex="0">	интернет-банк
+                <div class="header__dropdown-content">
+                  <div class="header__dropdown-content-inner">
+                    <a class="header__dropdown-content-item" href="/">	Физическим лицам</a>
+                    <a class="header__dropdown-content-item" href="/">	 Юридическим лицам</a>
+                  </div>
+                </div>
+              </div>
+              <button class="button-reset header__button-contacts">
+                <svg class="icon icon-chat" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#chat"></use>
+                </svg>
+              </button>
+            </div>
+            <a class="header__logo logo" href="/"><img class="header__logo-decktop" src="img/logo.svg" alt="Банк Казани"><img class="header__logo-mobile" src="img/logo-white.png" alt="Банк Казани"></a>
           </div>
-          <div class="header__bottom-block">
-            <a class="header__bottom-block-link _is-active" href="/">	Частным лицам</a>
-            <a class="header__bottom-block-link" href="/">	Бизнесу</a>
-            <svg class="icon icon-search header__search-icon" width="28" height="28" aria-label="Поиск">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
+          <div class="header__bottom-block js-form-container">
+            <form class="header__bottom-block-form" action="/">
+              <input class="header__bottom-block-form-input" type="text" name="q" placeholder="Что ищете?">
+            </form>
+            <div class="header__bottom-block-links">
+              <a class="header__bottom-block-link _is-active" href="/">	Частным лицам</a>
+              <a class="header__bottom-block-link" href="/">	Бизнесу</a>
+            </div>
+            <button class="button-reset header__search-button-hide js-hide-form-button">
+              <span></span>
+              <span></span>
+            </button>
+            <button class="button-reset header__search-button js-show-form-button">
+              <svg class="icon icon-search header__search-icon" width="28" height="28" aria-label="Поиск">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </header>
@@ -134,34 +185,45 @@
           </ul>
         </section>
         <section class="biometric-feautures">
+          <div class="site-content">
+            <h2 class="biometric-feautures__title site-second-title">	Преимущества биометрии</h2>
+          </div>
           <ul class="site-content biometric-feautures__content">
             <li class="biometric-feautures__item">
               <svg class="icon icon-shield biometric-feautures__item-icon" width="58" height="58">
                 <use xlink:href="img/sprite.svg#shield"></use>
               </svg>
-              <span class="biometric-feautures__item-heading">	Безопасно</span>
-              <p class="biometric-feautures__item-text">	Двойная проверка: подтверждение учётной записи ЕСИА на портале «Госуслуги» и очнов отделении любого банка при регистрации в Единой биометрической системе</p>
+              <div>
+                <span class="biometric-feautures__item-heading">	Безопасно</span>
+                <p class="biometric-feautures__item-text">	Двойная проверка: подтверждение учётной записи ЕСИА на портале «Госуслуги» и очнов отделении любого банка при регистрации в Единой биометрической системе</p>
+              </div>
             </li>
             <li class="biometric-feautures__item">
               <svg class="icon icon-sofa biometric-feautures__item-icon" width="58" height="58">
                 <use xlink:href="img/sprite.svg#sofa"></use>
               </svg>
-              <span class="biometric-feautures__item-heading">	Удобно</span>
-              <p class="biometric-feautures__item-text">	Вы становитесь полноценным клиентом банка и можете оформить ряд банковских продуктов, не выходя из дома</p>
+              <div>
+                <span class="biometric-feautures__item-heading">	Удобно</span>
+                <p class="biometric-feautures__item-text">	Вы становитесь полноценным клиентом банка и можете оформить ряд банковских продуктов, не выходя из дома</p>
+              </div>
             </li>
             <li class="biometric-feautures__item">
               <svg class="icon icon-star biometric-feautures__item-icon _stroke" width="58" height="58">
                 <use xlink:href="img/sprite.svg#star"></use>
               </svg>
-              <span class="biometric-feautures__item-heading">	Лучшие условия</span>
-              <p class="biometric-feautures__item-text">	Находите лучшие условия вкладов и кредитов через интернет и заключайте договор с банком дистанционно</p>
+              <div>
+                <span class="biometric-feautures__item-heading">	Лучшие условия</span>
+                <p class="biometric-feautures__item-text">	Находите лучшие условия вкладов и кредитов через интернет и заключайте договор с банком дистанционно</p>
+              </div>
             </li>
             <li class="biometric-feautures__item">
               <svg class="icon icon-time biometric-feautures__item-icon _stroke" width="58" height="58">
                 <use xlink:href="img/sprite.svg#time"></use>
               </svg>
-              <span class="biometric-feautures__item-heading">	В любое время</span>
-              <p class="biometric-feautures__item-text">	Открывайте счета, вклады и получайте кредитыв удобное для вас время</p>
+              <div>
+                <span class="biometric-feautures__item-heading">	В любое время</span>
+                <p class="biometric-feautures__item-text">	Открывайте счета, вклады и получайте кредитыв удобное для вас время</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -269,17 +331,19 @@
             </div>
             <div class="footer__middle-block-col">
               <a class="button button-reset button_secondary footer__button">	Офисы и банкоматы</a>
-              <span class="footer__legend">	Мобильное приложение:</span>
+              <span class="footer__legend">	Социальные сети</span>
               <ul class="footer__social">
                 <li class="footer__social-item">
-                  <a class="footer__social-link" href="/" arial-label="Вконтакте"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-fb footer__social-link-icon">
+                  <a class="footer__social-link" href="/">
+                    <span class="visually-hidden">	вконтакте</span><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-fb footer__social-link-icon">
 <rect width="40" height="40" rx="8" fill="#3B5998"/>
 <path d="M22.0151 16.124V13.8166C22.0151 12.7749 22.2545 12.248 23.9362 12.248H26.0461V8.37207H22.5253C18.2109 8.37207 16.7874 10.2737 16.7874 13.538V16.124H13.9531V20H16.7874V31.6279H22.0151V20H25.5675L26.0461 16.124H22.0151Z" fill="white"/>
 </svg>
                   </a>
                 </li>
                 <li class="footer__social-item">
-                  <a class="footer__social-link" href="/" arial-label="facebook"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-vk footer__social-link-icon">
+                  <span class="visually-hidden">	facebook</span>
+                  <a class="footer__social-link" href="/"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-vk footer__social-link-icon">
 <rect width="40" height="40" rx="8" fill="#4D7198"/>
 <path d="M29.1001 22.9426C30.9681 24.6459 31.3538 25.462 31.414 25.5685C32.1853 26.8223 30.5704 26.9169 30.5704 26.9169L27.4611 26.9642C27.4611 26.9642 26.7863 27.0943 25.9186 26.5029C24.7496 25.7223 23.6288 23.676 22.7972 23.948C21.9416 24.2201 21.9657 26.0535 21.9657 26.0535C21.9657 26.0535 21.9657 26.3137 21.7729 26.5148C21.5559 26.7395 21.1341 26.6567 21.1341 26.6567H19.7482C19.7482 26.6567 16.6751 26.9642 13.9876 24.2082C11.035 21.2039 8.43194 15.2897 8.43194 15.2897C8.43194 15.2897 8.28732 14.9349 8.44399 14.7338C8.62476 14.5445 9.13092 14.5445 9.13092 14.5445H12.4571C12.4571 14.5445 12.7825 14.5445 12.9874 14.7338C13.1682 14.8639 13.2766 15.136 13.2766 15.136C13.2766 15.136 13.8069 16.4489 14.53 17.6554C15.9159 20.0092 16.5546 20.5178 17.0005 20.2694C17.7236 19.9027 17.5187 16.9457 17.5187 16.9457C17.5187 16.9457 17.5308 15.8693 17.1692 15.3962C16.892 15.0295 16.3618 14.9112 16.1328 14.8876C15.94 14.8639 16.2533 14.4381 16.651 14.237C17.2536 13.9531 18.3021 13.9531 19.5554 13.9531C20.5316 13.9531 20.8088 14.0241 21.1824 14.1069C22.3393 14.3789 21.9416 15.4317 21.9416 17.9393C21.9416 18.7554 21.8211 19.8673 22.3875 20.2576C22.6406 20.4232 23.2672 20.2813 24.8339 17.6909C25.557 16.4607 26.1114 15.0058 26.1114 15.0058C26.1114 15.0058 26.2319 14.7574 26.4127 14.6392C26.6055 14.5445 26.8706 14.5445 26.8706 14.5445H30.3655C30.3655 14.5445 31.4261 14.4263 31.5948 14.8876C31.7756 15.3725 31.1971 16.5199 29.763 18.3769C27.425 21.4523 27.1599 21.1684 29.1001 22.9426Z" fill="white"/>
 </svg>

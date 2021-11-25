@@ -1,3 +1,7 @@
 @function rem($size) {
 	@return $size / 10px * 1rem;
 }
+
+@function rem-mq($size) {
+	@return $size / 6px * 1rem;
+}

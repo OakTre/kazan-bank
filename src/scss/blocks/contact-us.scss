@@ -6,11 +6,21 @@
 	background-position: center;
 	background-size: cover;
 
+	@include mq(xs) {
+		padding: rem-mq(30px) 0 rem-mq(60px) 0;
+		background-position: 60% 100%;
+		margin-bottom: rem-mq(47px);
+	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
 		padding-right: rem(60px);
+
+		@include mq(xs) {
+			align-items: stretch;
+		}
 	}
 
 	&__content-wrapp {
@@ -24,6 +34,12 @@
 		font-weight: 600;
 		font-size: rem(22px);
 		line-height: rem(26px);
+
+		@include mq(xs) {
+			font-size: rem-mq(20px);
+			line-height: rem-mq(24px);
+			margin-bottom: 12px;
+		}
 	}
 
 	&__tel {
@@ -41,11 +57,21 @@
 		&:focus {
 			color: var(--color-green-light);
 		}
+
+		@include mq(xs) {
+			font-size: rem-mq(28px);
+			line-height: rem-mq(33px);
+			margin-bottom: rem-mq(47px);
+		}
 	}
 
 	&__form {
 		display: flex;
 		align-items: center;
+
+		@include mq(xs) {
+			flex-direction: column;
+		}
 
 		&-label {
 			display: block;
@@ -57,6 +83,13 @@
 			.parsley-errors-list {
 				font-size: rem(14px);
 				color: var(--color-error);
+			}
+
+			@include mq(xs) {
+				width: 100%;
+				height: rem-mq(42px);
+				margin-right: 0;
+				margin-bottom: rem-mq(16px);
 			}
 		}
 
@@ -81,11 +114,23 @@
 			&.parsley-error {
 				border-color: var(--color-error);
 			}
+
+			@include mq(xs) {
+				padding: rem-mq(12px) rem-mq(16px);
+				font-size: rem-mq(14px);
+				line-height: rem-mq(16px);
+			}
 		}
 
 		&-button {
 			padding: rem(23px) rem(33px);
 			font-weight: 400;
+
+			@include mq(xs) {
+				padding: rem-mq(15px);
+				width: 100%;
+				display: block;
+			}
 		}
 	}
 }

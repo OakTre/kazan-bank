@@ -1,7 +1,7 @@
 .hero {
 	position: relative;
 	margin-bottom: 10rem;
-	padding-top: 33.5rem;
+	padding-top: 38.5rem;
 	padding-bottom: 12.8rem;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -28,5 +28,41 @@
 		padding: rem(22px) rem(32px);
 		font-size: rem(16px);
 		line-height: rem(19px);
+	}
+
+	@include mq(md) {
+		position: relative;
+		z-index: 2;
+		color: var(--color-white);
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background: rgba($color: #000000, $alpha: 0.2);
+			content: "";
+		}
+	}
+
+	@include mq(sm) {
+		padding-top: 68rem;
+		margin-bottom: 0;
+		padding-bottom: rem-mq(58px);
+		background-position: 74% 100%;
+
+		&__title {
+			font-size: rem-mq(24px);
+			line-height: rem-mq(28px);
+			margin-bottom: rem-mq(20px);
+		}
+
+		&__text {
+			font-size: rem-mq(12px);
+			line-height: rem-mq(15px);
+			margin-bottom: rem-mq(20px);
+		}
 	}
 }

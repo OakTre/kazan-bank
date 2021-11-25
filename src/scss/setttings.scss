@@ -12,8 +12,12 @@ html {
 		font-size: 9px;
 	}
 
+	@include mq(custom, max, 1367px) {
+		font-size: 7px;
+	}
+
 	@include mq(lg) {
-		font-size: 8px;
+		font-size: 6px;
 	}
 }
 
@@ -79,6 +83,16 @@ ul {
 	max-width: 1526px;
 	margin: 0 auto;
 	padding: 0 20px;
+
+	@include mq(custom, max, 1367px) {
+		max-width: 1170px;
+	}
+
+	@include mq(sm) {
+		.site-content {
+			padding: 0;
+		}
+	}
 }
 
 .site-content {
@@ -86,6 +100,10 @@ ul {
 	max-width: 1270px;
 	margin: 0 auto;
 	padding: 0 20px;
+
+	@include mq(custom, max, 1367px) {
+		max-width: 1170px;
+	}
 }
 
 .grid {

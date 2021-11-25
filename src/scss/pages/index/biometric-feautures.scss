@@ -1,13 +1,45 @@
 .biometric-feautures {
 	margin-bottom: rem(116px);
 
+	@include mq(xs) {
+		margin-bottom: rem-mq(40px);
+	}
+
+	&__title {
+		margin-bottom: rem(60px);
+
+		@include mq(xs) {
+			margin-bottom: rem-mq(22px);
+		}
+	}
+
 	&__content {
 		display: flex;
+
+		@include mq(custom, max, 1440px) {
+			margin-top: -1.5rem;
+			margin-bottom: -1.5rem;
+		}
+
+		@include mq(xs) {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
 		max-width: rem(250px);
 		margin-right: rem(66px);
+
+		@include mq(custom, max, 1440px) {
+			max-width: none;
+			width: calc(25% - 3rem);
+			margin: 1.5rem;
+			display: flex;
+		}
+
+		@include mq(xs) {
+			width: 100%;
+		}
 
 		&-icon {
 			display: block;
@@ -19,6 +51,14 @@
 				stroke: var(--color-purple);
 				stroke-width: 4px;
 			}
+
+			@include mq(xs) {
+				flex-shrink: 0;
+				margin-right: rem-mq(16px);
+				width: rem-mq(36px);
+				height: rem-mq(36px);
+				margin-bottom: 0;
+			}
 		}
 
 		&-heading {
@@ -27,12 +67,23 @@
 			font-weight: 600;
 			font-size: rem(24px);
 			line-height: rem(28px);
+
+			@include mq(xs) {
+				font-size: rem-mq(16px);
+				line-height: rem-mq(21px);
+				margin-bottom: 4px;
+			}
 		}
 
 		&-text {
 			margin: 0;
 			font-size: rem(18px);
 			line-height: rem(24px);
+
+			@include mq(xs) {
+				font-size: rem-mq(12px);
+				line-height: rem-mq(16px);
+			}
 		}
 	}
 }

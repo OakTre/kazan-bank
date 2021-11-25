@@ -3,18 +3,45 @@
 		position: relative;
 		padding-top: rem(126px);
 		padding-bottom: rem(220px);
+
+		@include mq(sm) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: rem-mq(40px);
+			padding-bottom: rem-mq(50px);
+		}
 	}
 
 	&__image {
 		position: absolute;
 		top: rem(14px);
 		right: rem(37px);
+		width: rem(448px);
+		height: rem(448px);
+
+		@include mq(sm) {
+			position: static;
+			top: auto;
+			right: auto;
+			flex-shrink: 0;
+			width: rem-mq(160px);
+			height: rem-mq(173px);
+			align-self: center;
+			margin-bottom: rem-mq(25px);
+		}
 	}
 
 	&__title {
 		font-size: rem(54px);
 		line-height: rem(64px);
 		margin-bottom: rem(30px);
+
+		@include mq(sm) {
+			font-size: rem-mq(24px);
+			line-height: rem-mq(28px);
+			margin-bottom: rem-mq(20px);
+		}
 	}
 
 	&__text {
@@ -23,16 +50,31 @@
 		margin-bottom: rem(40px);
 		font-size: rem(22px);
 		line-height: rem(32px);
+
+		@include mq(sm) {
+			font-size: rem-mq(12px);
+			line-height: rem-mq(15px);
+			margin-bottom: rem-mq(20px);
+		}
 	}
 
 	&__btns {
 		display: flex;
 		align-items: center;
+
+		@include mq(sm) {
+			flex-direction: column;
+		}
 	}
 
 	&__button-repeat {
 		margin-right: rem(40px);
 		padding: rem(22px) rem(32px);
+
+		@include mq(sm) {
+			padding: rem-mq(13px) rem-mq(15px);
+			margin-bottom: rem-mq(21px);
+		}
 	}
 
 	&__near-office-btn {
@@ -59,6 +101,11 @@
 			.error-page__near-office-btn-icon {
 				fill: var(--color-purple);
 			}
+		}
+
+		@include mq(sm) {
+			font-size: rem-mq(10px);
+			line-height: rem-mq(12px);
 		}
 	}
 

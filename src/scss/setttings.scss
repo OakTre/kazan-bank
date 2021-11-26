@@ -27,6 +27,11 @@ body {
 	line-height: rem(24px);
 	font-family: var(--main-ff);
 	background-color: var(--color-white);
+
+	&.mod-no-scroll {
+		overflow: hidden;
+		height: 100vh;
+	}
 }
 
 img {

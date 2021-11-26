@@ -199,3 +199,9 @@
 		display: none;
 	}
 }
+
+.drop-menu-container {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height var(--main-transition);
+}

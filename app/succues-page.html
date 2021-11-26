@@ -15,7 +15,7 @@
         <div class="site-container header__container">
           <div class="header__top-block">
             <div class="header__top-block-info-wrap">
-              <button class="header__burger-button-mobile button-reset">
+              <button class="header__burger-button-mobile button-reset js-open-mob-menu-btn">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -87,11 +87,103 @@
               <span></span>
               <span></span>
             </button>
-            <button class="button-reset header__search-button js-show-form-button">
-              <svg class="icon icon-search header__search-icon" width="28" height="28" aria-label="Поиск">
+            <button class="button-reset header__search-button js-show-form-button" aria-label="Поиск">
+              <svg class="icon icon-search header__search-icon" width="28" height="28">
                 <use xlink:href="img/sprite.svg#search"></use>
               </svg>
             </button>
+          </div>
+          <div class="header__mobile-nav mobile-nav">
+            <div class="mobile-nav__inner">
+              <form class="mobile-nav__form">
+                <input class="mobile-nav__form-input" type="text" placeholder="Поиск" name="q">
+                <button class="mobile-nav__form-button button-reset">
+                  <svg class="icon icon-search mobile-nav__form-button-icon" width="15" height="15">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+              <ul class="mobile-nav__nav-list mob-nav">
+                <li class="mob-nav__item js-drop-menu-container-prent">
+                  <div class="mob-nav__head js-drop-menu-btn">
+                    <span class="mob-nav__head-title">	О банке</span>
+                    <svg class="icon icon-arrow-shevron-left mob-nav__head-icon gl__drop-menu-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-shevron-left"></use>
+                    </svg>
+                  </div>
+                  <div class="js-drop-menu-container drop-menu-container mob-nav__body-container">
+                    <ul class="mob-nav__body js-drop-menu">
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Общая информация</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Реквизиты банка</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Руководство и лицензии банка</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Открытая информация</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mob-nav__item js-drop-menu-container-prent">
+                  <div class="mob-nav__head js-drop-menu-btn">
+                    <span class="mob-nav__head-title">	Частным лицам</span>
+                    <svg class="icon icon-arrow-shevron-left mob-nav__head-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-shevron-left"></use>
+                    </svg>
+                  </div>
+                  <div class="js-drop-menu-container drop-menu-container mob-nav__body-container">
+                    <ul class="mob-nav__body js-drop-menu">
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Общая информация</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Реквизиты банка</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Руководство и лицензии банка</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Открытая информация</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="mob-nav__item js-drop-menu-container-prent">
+                  <div class="mob-nav__head js-drop-menu-btn">
+                    <span class="mob-nav__head-title">	Бизнесу</span>
+                    <svg class="icon icon-arrow-shevron-left mob-nav__head-icon" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#arrow-shevron-left"></use>
+                    </svg>
+                  </div>
+                  <div class="js-drop-menu-container drop-menu-container mob-nav__body-container">
+                    <ul class="mob-nav__body js-drop-menu">
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Общая информация</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Реквизиты банка</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Руководство и лицензии банка</a>
+                      </li>
+                      <li class="mob-nav__body-item">
+                        <a class="mob-nav__body-link" href="/">Открытая информация</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <a class="mobile-nav__tel" href="tel:+78007751877">	8 800 77-518-77</a>
+              <a class="mobile-nav__offices-link" href="/">
+                <svg class="icon icon-marker mobile-nav__offices-link-icon" width="16" height="16">
+                  <use xlink:href="img/sprite.svg#marker"></use>
+                </svg>	офисы и банкоматы
+              </a>
+            </div>
           </div>
         </div>
       </header>

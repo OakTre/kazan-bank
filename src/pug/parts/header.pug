@@ -1,8 +1,11 @@
+- mob_nav_arr = ["Общая информация", "Реквизиты банка", "Руководство и лицензии банка", "Открытая информация"]
+
+
 header.header(class=headerClass)
 	.site-container.header__container
 		.header__top-block
 			.header__top-block-info-wrap
-				button.header__burger-button-mobile.button-reset
+				button.header__burger-button-mobile.button-reset.js-open-mob-menu-btn
 					span
 					span
 					span
@@ -65,5 +68,51 @@ header.header(class=headerClass)
 			button.button-reset.header__search-button-hide.js-hide-form-button
 				span
 				span
-			button.button-reset.header__search-button.js-show-form-button
-				+icon("search")(width="28", height="28", class="header__search-icon", aria-label="Поиск")
+			button.button-reset.header__search-button.js-show-form-button(aria-label="Поиск")
+				+icon("search")(width="28", height="28", class="header__search-icon")
+		.header__mobile-nav.mobile-nav
+			.mobile-nav__inner
+				form.mobile-nav__form
+					input.mobile-nav__form-input(type="text", placeholder="Поиск", name="q")
+					button.mobile-nav__form-button.button-reset
+						+icon("search")(width="15", height="15", class="mobile-nav__form-button-icon")
+
+				ul.mobile-nav__nav-list.mob-nav
+					li.mob-nav__item.js-drop-menu-container-prent
+						.mob-nav__head.js-drop-menu-btn
+							span.mob-nav__head-title
+								|	О банке
+							+icon("arrow-shevron-left")(width="16", height="16", class="mob-nav__head-icon", class="gl__drop-menu-icon")
+						.js-drop-menu-container.drop-menu-container.mob-nav__body-container
+							ul.mob-nav__body.js-drop-menu
+								for item in mob_nav_arr
+									li.mob-nav__body-item
+										a.mob-nav__body-link(href="/")=item
+					li.mob-nav__item.js-drop-menu-container-prent
+						.mob-nav__head.js-drop-menu-btn
+							span.mob-nav__head-title
+								|	Частным лицам
+							+icon("arrow-shevron-left")(width="16", height="16", class="mob-nav__head-icon")
+						.js-drop-menu-container.drop-menu-container.mob-nav__body-container
+							ul.mob-nav__body.js-drop-menu
+								for item in mob_nav_arr
+									li.mob-nav__body-item
+										a.mob-nav__body-link(href="/")=item
+					li.mob-nav__item.js-drop-menu-container-prent
+						.mob-nav__head.js-drop-menu-btn
+							span.mob-nav__head-title
+								|	Бизнесу
+							+icon("arrow-shevron-left")(width="16", height="16", class="mob-nav__head-icon")
+						.js-drop-menu-container.drop-menu-container.mob-nav__body-container
+							ul.mob-nav__body.js-drop-menu
+								for item in mob_nav_arr
+									li.mob-nav__body-item
+										a.mob-nav__body-link(href="/")=item
+
+				a(href="tel:+78007751877").mobile-nav__tel
+					|	8 800 77-518-77
+				a.mobile-nav__offices-link(href="/")
+					+icon("marker")(width="16", height="16", class="mobile-nav__offices-link-icon")
+					|	офисы и банкоматы
+
+

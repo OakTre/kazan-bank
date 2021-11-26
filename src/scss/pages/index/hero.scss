@@ -65,4 +65,8 @@
 			margin-bottom: rem-mq(20px);
 		}
 	}
+
+	@include mq(xxs) {
+		background-position: 70% 100%;
+	}
 }

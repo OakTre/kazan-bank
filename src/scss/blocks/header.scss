@@ -19,6 +19,11 @@
 				margin-left: 0;
 				margin-bottom: 2.3rem;
 			}
+
+			&._is-active {
+				position: relative;
+				z-index: 30;
+			}
 		}
 
 		@include mq(md) {
@@ -257,6 +262,19 @@
 				&::placeholder {
 					color: var(--color-grey);
 				}
+
+				@include mq(sm) {
+					height: 3.2rem;
+					color: var(--color-white);
+
+					&::placeholder {
+						color: rgba($color: #fff, $alpha: 0.5);
+					}
+				}
+			}
+
+			@include mq(sm) {
+				padding: rem-mq(20px) 0 rem-mq(14px) 0;
 			}
 		}
 
@@ -445,9 +463,27 @@
 			width: 3rem;
 			height: 2px;
 			background-color: var(--color-white);
+			transition: opacity var(--main-transition), transfrom var(--main-transition);
 
 			&:nth-child(2) {
 				margin: 5px 0;
+				transition: opacity 100ms;
+			}
+		}
+
+		&._is-active {
+			span {
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:nth-child(1) {
+					transform: translateY(0.7rem) rotate(45deg);
+				}
+
+				&:nth-child(3) {
+					transform: translateY(-1.6rem) rotate(-45deg);
+				}
 			}
 		}
 
@@ -516,7 +552,7 @@
 
 		.button {
 			border-color: var(--color-green-light);
-			color: var(--color-green-light);
+			color: var(--color-dark);
 		}
 
 		.header__tel-mobile,
@@ -540,19 +576,19 @@
 
 		.header__button-contacts {
 			.icon {
-				stroke: var(--color-green-light);
+				stroke: var(--color-dark);
 			}
 		}
 
 		.header__offices-button {
 			.icon {
-				fill: var(--color-green-light);
+				fill: var(--color-dark);
 			}
 		}
 
 		.header__tel-mobile {
 			.icon {
-				fill: var(--color-green-light);
+				fill: var(--color-dark);
 			}
 		}
 
@@ -574,6 +610,54 @@
 
 		.header__search-button-hide span {
 			background-color: rgba($color: #000000, $alpha: 0.4);
+		}
+
+		.header__bottom-block-form-input {
+			color: var(--color-dark);
+
+			&::placeholder {
+				color: rgba($color: #000000, $alpha: 0.5);
+			}
+		}
+
+		.header__top-block-info-wrap._is-active {
+			.header__burger-button-mobile span {
+				background-color: var(--color-white);
+			}
+
+			.button {
+				border-color: var(--color-white);
+				color: var(--color-white);
+			}
+
+			.header__tel-mobile,
+			.header__button-contacts {
+				border-color: var(--color-white);
+			}
+
+			.header__tel-mobile {
+				.icon {
+					fill: var(--color-white);
+				}
+			}
+
+			.header__offices-button {
+				.icon {
+					fill: var(--color-white);
+				}
+			}
+
+			.header__button-contacts .icon {
+				stroke: var(--color-white);
+			}
+		}
+
+		.mobile-nav {
+			color: var(--color-white);
+		}
+
+		.header__dropdown-content-inner {
+			box-shadow: 0 0 0.8rem rgba($color: #000000, $alpha: 0.2);
 		}
 	}
 }

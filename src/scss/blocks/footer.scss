@@ -18,6 +18,11 @@
 			padding-top: 0;
 			row-gap: 4rem;
 		}
+
+		@include mq(xs) {
+			row-gap: rem-mq(24px);
+			border-bottom: none;
+		}
 	}
 
 	&__middle-block-col {
@@ -44,6 +49,12 @@
 		font-weight: 600;
 		font-size: rem(20px);
 		line-height: rem(24px);
+
+		@include mq(xs) {
+			font-size: rem-mq(18px);
+			line-height: 122%;
+			margin-bottom: rem-mq(15px);
+		}
 	}
 
 	&__nav-item {
@@ -55,6 +66,7 @@
 	}
 
 	&__nav-link {
+		font-weight: 600;
 		font-size: rem(18px);
 		line-height: rem(18px);
 		color: var(--color-grey);
@@ -67,9 +79,14 @@
 		&:focus {
 			color: var(--color-green-light);
 		}
+
+		@include mq(xs) {
+			font-size: rem-mq(14px);
+		}
 	}
 
 	&__tel {
+		font-weight: 600;
 		display: inline-block;
 		margin-bottom: rem(50px);
 		font-size: rem(32px);
@@ -91,6 +108,10 @@
 		&:focus {
 			color: var(--color-green-light);
 		}
+
+		@include mq(xs) {
+			margin-bottom: rem-mq(24px);
+		}
 	}
 
 	&__button {
@@ -106,6 +127,10 @@
 			border-color: var(--color-green-light);
 			color: var(--color-green-light);
 		}
+
+		@include mq(xs) {
+			margin-bottom: rem-mq(24px);
+		}
 	}
 
 	&__mobile {
@@ -113,6 +138,15 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+		}
+
+		@include mq(xs) {
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.footer__legend {
+				width: 100%;
+			}
 		}
 	}
 
@@ -137,6 +171,11 @@
 			margin-right: 0 !important;
 			margin-bottom: rem-mq(10px) !important;
 		}
+
+		@include mq(xs) {
+			margin-bottom: 0 !important;
+			margin-right: rem-mq(20px) !important;
+		}
 	}
 
 	&__mobile-qr {
@@ -146,8 +185,7 @@
 
 		&-img {
 			display: block;
-			width: rem(58px);
-			height: rem(58px);
+			width: 12rem;
 			object-fit: cover;
 			margin-right: rem(14px);
 		}
@@ -155,10 +193,14 @@
 
 		span {
 			display: inline-block;
-			max-width: 56%;
+			max-width: 13rem;
 			color: var(--color-grey);
 			font-size: rem(14px);
 			line-height: rem(16px);
+		}
+
+		@include mq(xs) {
+			display: none;
 		}
 	}
 
@@ -178,6 +220,10 @@
 	&__bottom-block {
 		padding-top: rem(25px);
 		padding-bottom: rem(40px);
+
+		@include mq(xs) {
+			padding-top: 0;
+		}
 	}
 
 	&__links {
@@ -221,6 +267,11 @@
 
 			&:focus {
 				color: var(--color-green-light);
+			}
+
+			@include mq(sm) {
+				font-size: rem-mq(14px);
+				line-height: rem-mq(16px);
 			}
 		}
 
@@ -276,6 +327,8 @@
 		@include mq(xs) {
 			margin-right: 0;
 			margin-bottom: rem-mq(10px);
+			font-size: rem-mq(14px);
+			line-height: rem-mq(16px);
 		}
 	}
 
@@ -295,6 +348,7 @@
 
 		@include mq(xs) {
 			margin-top: rem-mq(10px);
+			line-height: rem-mq(16px);
 		}
 	}
 }

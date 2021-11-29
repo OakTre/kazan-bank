@@ -42,6 +42,7 @@
 		}
 
 		&-icon {
+			flex-shrink: 0;
 			display: block;
 			margin-bottom: rem(32px);
 			fill: var(--color-purple);
@@ -52,7 +53,7 @@
 				stroke-width: 4px;
 			}
 
-			@include mq(xs) {
+			@include mq(md) {
 				flex-shrink: 0;
 				margin-right: rem-mq(16px);
 				width: rem-mq(36px);

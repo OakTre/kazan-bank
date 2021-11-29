@@ -28,6 +28,10 @@
 		padding: rem(22px) rem(32px);
 		font-size: rem(16px);
 		line-height: rem(19px);
+
+		@include mq(sm) {
+			padding: rem-mq(14px) rem-mq(15px);
+		}
 	}
 
 	@include mq(md) {

@@ -24,7 +24,7 @@
 	line-height: 120%;
 	text-transform: uppercase;
 	border: none;
-	border-radius: 10px;
+	border-radius: var(--border-r);
 	background-color: var(--color-green-light);
 	color: var(--color-white);
 	cursor: pointer;
@@ -94,6 +94,11 @@
 		border-color: var(--color-white);
 		color: var(--color-white);
 	}
+
+	@include mq(sm) {
+		padding: rem-mq(8px);
+		border-radius: rem-mq(4px);
+	}
 }
 
 .nav {
@@ -140,6 +145,11 @@
 		height: rem(22px);
 		object-fit: cover;
 		transform: translateX(10px);
+	}
+
+	@include mq(sm) {
+		font-size: rem-mq(14px);
+		line-height: rem-mq(16px);
 	}
 }
 

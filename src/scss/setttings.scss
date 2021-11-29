@@ -8,8 +8,8 @@ html {
 	font-size:  9px;
 	line-height: 1.2;
 
-	@include mq(custom, max, 1440px) {
-		font-size: 9px;
+	@include mq(custom, max, 1536px) {
+		font-size: 8px;
 	}
 
 	@include mq(custom, max, 1367px) {
@@ -89,8 +89,12 @@ ul {
 	margin: 0 auto;
 	padding: 0 4rem;
 
+	@include mq(custom, max, 1536px) {
+		max-width: 1250px;
+	}
+
 	@include mq(custom, max, 1367px) {
-		max-width: 1170px;
+		max-width: 1097px;
 	}
 
 	@include mq(sm) {
@@ -107,7 +111,7 @@ ul {
 	padding: 0 20px;
 
 	@include mq(custom, max, 1367px) {
-		max-width: 1170px;
+		max-width: 1097px;
 	}
 }
 

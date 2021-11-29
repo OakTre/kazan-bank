@@ -2071,11 +2071,17 @@ ul {
   margin-bottom: 2.6rem;
 }
 
-@media screen and (max-width:1440px) {
+@media screen and (max-width:1536px) {
   html {
-    font-size: 9px;
+    font-size: 8px;
   }
 
+  .site-container {
+    max-width: 1250px;
+  }
+}
+
+@media screen and (max-width:1440px) {
   .biometric-feautures__content {
     margin-top: -1.5rem;
     margin-bottom: -1.5rem;
@@ -2097,11 +2103,11 @@ ul {
   }
 
   .site-container {
-    max-width: 1170px;
+    max-width: 1097px;
   }
 
   .site-content {
-    max-width: 1170px;
+    max-width: 1097px;
   }
 }
 

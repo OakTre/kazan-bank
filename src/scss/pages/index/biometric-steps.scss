@@ -7,8 +7,9 @@
 		row-gap: rem(60px);
 		column-gap: rem(48px);
 
-		@include mq(xs) {
+		@include mq(sm) {
 			row-gap: rem-mq(30px);
+			column-gap: 0;
 		}
 	}
 
@@ -125,6 +126,11 @@
 				font-size: rem-mq(14px);
 				line-height: rem-mq(19px);
 			}
+
+			&-text {
+				font-size: 1.4rem;
+				line-height: 1.9rem;
+			}
 		}
 	}
 
@@ -141,6 +147,12 @@
 		margin-bottom: rem(10px);
 		font-size: rem(20px);
 		line-height: rem(26px);
+
+		@include mq(sm) {
+			font-size: rem(14px);
+			line-height: rem(19px);
+			margin-bottom: 1rem;
+		}
 	}
 
 	&__link {
@@ -174,6 +186,11 @@
 			.biometric-steps__link-icon {
 				fill: var(--color-purple);
 			}
+		}
+
+		@include mq(sm) {
+			font-size: rem(14px);
+			line-height: rem(18px);
 		}
 	}
 

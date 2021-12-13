@@ -44,7 +44,8 @@
 		@include mq(xs) {
 			&-img {
 				margin: 0 auto;
-				width: 70%;
+				width: 26.9rem;
+				height: 17.7rem;
 				height: auto;
 			}
 		}
@@ -54,8 +55,8 @@
 		max-width: rem(566px);
 		margin-bottom: rem(60px);
 
-		@include mq(xs) {
-			margin-bottom: rem-mq(20px);
+		@include mq(sm) {
+			margin-bottom: rem-mq(22px);
 		}
 	}
 
@@ -108,6 +109,13 @@
 			color: var(--color-green-light);
 			counter-increment: section;
 			content: counter(section);
+
+			@include mq(sm) {
+				width: 3.3rem;
+				height: 3.3rem;
+				font-size: 1.5rem;
+				line-height: 1.8rem;
+			}
 		}
 
 		&:last-child {

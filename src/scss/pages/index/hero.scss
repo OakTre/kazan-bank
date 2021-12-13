@@ -52,7 +52,7 @@
 	}
 
 	@include mq(sm) {
-		padding-top: 68rem;
+		padding-top: 48rem;
 		margin-bottom: 0;
 		padding-bottom: rem-mq(58px);
 		background-position: 74% 100%;
@@ -67,6 +67,11 @@
 			font-size: rem-mq(12px);
 			line-height: rem-mq(15px);
 			margin-bottom: rem-mq(20px);
+		}
+
+		&__button {
+			font-size: 1rem;
+			line-height: 1.2rem;
 		}
 	}
 

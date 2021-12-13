@@ -16,8 +16,8 @@ html {
 		font-size: 7px;
 	}
 
-	@include mq(lg) {
-		font-size: 7px;
+	@include mq(custom, max, 680px) {
+		font-size: 10px;
 	}
 }
 
@@ -98,6 +98,7 @@ ul {
 	}
 
 	@include mq(sm) {
+		padding: 0 2rem;
 		.site-content {
 			padding: 0;
 		}

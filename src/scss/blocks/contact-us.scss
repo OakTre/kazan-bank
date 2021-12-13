@@ -38,9 +38,9 @@
 		line-height: rem(26px);
 
 		@include mq(xs) {
-			font-size: rem-mq(20px);
-			line-height: rem-mq(24px);
-			margin-bottom: 12px;
+			font-size: rem-mq(14px);
+			line-height: rem-mq(16px);
+			margin-bottom: 1.5rem;
 		}
 	}
 
@@ -121,6 +121,7 @@
 				padding: rem-mq(12px) rem-mq(16px);
 				font-size: rem-mq(14px);
 				line-height: rem-mq(16px);
+				border-radius: 4px;
 			}
 		}
 
@@ -132,6 +133,8 @@
 				padding: rem-mq(15px);
 				width: 100%;
 				display: block;
+				font-size: 1rem;
+				line-height: 1.2rem;
 			}
 		}
 	}

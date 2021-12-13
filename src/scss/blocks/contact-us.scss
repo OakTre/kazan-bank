@@ -67,9 +67,12 @@
 		}
 	}
 
-	&__form {
+	&__form-wrap {
 		display: flex;
 		align-items: center;
+	}
+
+	&__form {
 
 		@include mq(xs) {
 			flex-direction: column;

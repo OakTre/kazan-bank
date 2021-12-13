@@ -8,7 +8,10 @@ section.contact-us.lazy(data-bg="img/contact-us-bg-all.webp", data-bg-fallback="
 			span.contact-us__legend
 				|	Оставьте заявку и мы вам перезовним
 			form.contact-us__form(action="", data-need-validation)
-				label.contact-us__form-label
-					input.contact-us__form-input.js-phone-mask(type="tel", name="tel", placeholder="+7", data-parsley-required, data-parsley-phone)
-				button.button-rest.button.contact-us__form-button
-					|	перезвоните мне
+				.contact-us__form-wrap
+					label.contact-us__form-label
+						input.contact-us__form-input.js-phone-mask(type="tel", name="tel", placeholder="+7", data-parsley-required, data-parsley-phone)
+					button.button-rest.button.contact-us__form-button
+						|	перезвоните мне
+				label(for="/")
+					| текст

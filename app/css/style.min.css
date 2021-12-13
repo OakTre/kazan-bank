@@ -1210,7 +1210,7 @@ ul {
   color: var(--color-green-light);
 }
 
-.contact-us__form {
+.contact-us__form-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

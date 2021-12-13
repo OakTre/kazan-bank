@@ -70,6 +70,10 @@
 	&__form-wrap {
 		display: flex;
 		align-items: center;
+
+		@include mq(xs) {
+			flex-direction: column;
+		}
 	}
 
 	&__form {

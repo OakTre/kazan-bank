@@ -2949,7 +2949,8 @@ ul {
     margin-bottom: 4.7rem;
   }
 
-  .contact-us__form {
+  .contact-us__form,
+  .contact-us__form-wrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
